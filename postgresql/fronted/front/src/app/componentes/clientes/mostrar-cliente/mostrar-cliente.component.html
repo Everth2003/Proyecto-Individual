@@ -1,0 +1,27 @@
+<p-button [routerLink]= "['/crear-cliente']" label="Add client" icon="pi pi-check"></p-button>
+<p-button [routerLink]= "['/actualizar-cliente']" label="Uptdate client" icon="pi pi-check"></p-button>
+
+<p-table [value]="clientes">
+    <ng-template pTemplate="header">
+        
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Contraseña</th>
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-client>
+        <tr>
+            <td>{{client.id}}</td>
+            <td>{{client.nombreCliente}}</td>
+            <td>{{client.direccionCliente}}</td>
+            <td>{{client.telefonoCliente}}</td>
+            <td>{{client.correoCliente}}</td>
+            <td>{{client.passwordCliente}}</td>
+        </tr>
+    </ng-template>
+</p-table>
